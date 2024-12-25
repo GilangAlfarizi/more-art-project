@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Moreart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    @vite('resources/css/app.css')
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="flex flex-col h-screen">
@@ -20,7 +21,9 @@
             <img src="{{ URL::asset('/image/moreart-logo-alt.png') }}" alt="logo"
                 class="w-8 h-8 mt-3 lg:mr-10 mr-6 object-contain">
             <a href="{{ url('/') }}">
-                <p class="my-2 py-2 lg:px-6 px-4 {{ Route::is('home.index') ? 'bg-gray-400/60 lg:rounded-3xl rounded-xl' : '' }}">Home
+                <p
+                    class="my-2 py-2 lg:px-6 px-4 {{ Route::is('home.index') ? 'bg-gray-400/60 lg:rounded-3xl rounded-xl' : '' }}">
+                    Home
                 </p>
             </a>
             <a href="{{ route('home.works') }}">
