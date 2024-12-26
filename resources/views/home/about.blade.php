@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="lg:mt-32 mt-24">
-        {{-- <div class="grid lg:grid-cols-2 grid-rows-2"> --}}
         <div class="bg-[#EFF0F2] flex flex-col lg:flex-row justify-center py-12">
             <div class="flex justify-center items-center w-full lg:w-1/2 lg:p-0">
                 <img src="https://images.pexels.com/photos/3224230/pexels-photo-3224230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

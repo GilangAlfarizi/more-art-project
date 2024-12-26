@@ -57,8 +57,3 @@
         </div>
     </div>
 @endsection
-
-@if ($event_type->category_img)
-@else
-<p>no image</p>
-@endif
