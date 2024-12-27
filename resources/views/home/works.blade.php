@@ -37,7 +37,7 @@
                                 class="object-cover w-full h-full">
                             <div class="absolute inset-0 flex items-center justify-center group">
                                 <h2
-                                    class="text-white-900 pl-4 text-opacity-10 text-7xl uppercase font-bold font-lora transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+                                    class="text-white-900 pl-4 text-opacity-35 text-7xl uppercase font-bold font-lora transition-opacity duration-300 ease-in-out group-hover:opacity-0">
                                     {{ $project->title }}
                                 </h2>
                                 <div
