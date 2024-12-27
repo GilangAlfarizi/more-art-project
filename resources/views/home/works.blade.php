@@ -35,11 +35,18 @@
                         <a href="{{ route('home.works.detail', $project->id) }}">
                             <img src="{{ $project->first_image_url }}" alt="thumbnail-{{ $project->title }}"
                                 class="object-cover w-full h-full">
-                            <div
-                                class="invisible absolute inset-0 flex items-center justify-center group-hover:bg-yellow-600 group-hover:bg-opacity-80 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                            <div class="absolute inset-0 flex items-center justify-center group">
                                 <h2
-                                    class="text-blue-900 text-2xl font-bold font-lora opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    {{ $project->title }}</h2>
+                                    class="text-white-900 pl-4 text-opacity-10 text-7xl uppercase font-bold font-lora transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+                                    {{ $project->title }}
+                                </h2>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-yellow-600 bg-opacity-80 opacity-0 group-hover:opacity-75 transition-opacity duration-300 ease-in-out">
+                                    <h2
+                                        class="text-blue-900 text-2xl text-center font-bold font-lora opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out p-4">
+                                        {{ $project->title }}
+                                    </h2>
+                                </div>
                             </div>
                         </a>
                     @else
@@ -50,7 +57,7 @@
                 </div>
 
             @empty
-                <div class="alert alert-danger text-center">
+                <div class="alert alert-danger text-center my-4">
                     Project data is empty.
                 </div>
             @endforelse

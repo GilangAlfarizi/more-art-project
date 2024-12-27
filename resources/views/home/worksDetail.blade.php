@@ -34,7 +34,7 @@
             <div class="relative group mx-auto">
                 <a href="{{ $project->videoUrl }}" target="_blank">
                     <img id="largeImage" class="h-auto max-w-full rounded-lg max-h-80"
-                        src="{{ !empty($images) ? $images[0] : 'error, image fail to appear' }}" alt="activeImage">
+                        src="{{ !empty($images) ? $images[0]->url : 'error, image fail to appear' }}" alt="activeImage">
                     <div
                         class="rounded-md invisible absolute inset-0 flex items-center justify-center group-hover:bg-yellow-600 group-hover:bg-opacity-80 group-hover:visible group-hover:opacity-100 transition-all duration-150 ease-in-out">
                         <svg fill="#EFF0F2"
@@ -43,7 +43,7 @@
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 260 180"
                             enable-background="new 0 0 260 180" xml:space="preserve">
                             <path d="M220,2H40C19.01,2,2,19.01,2,40v100c0,20.99,17.01,38,38,38h180c20.99,0,38-17.01,38-38V40C258,19.01,240.99,2,220,2z
-                                M102,130V50l68,40L102,130z" />
+                                                M102,130V50l68,40L102,130z" />
                         </svg>
                     </div>
                 </a>
@@ -52,25 +52,25 @@
                 @foreach ($images as $image)
                     <div class="flex-shrink-0 aspect-video w-48">
                         <img class="h-32 w-full object-cover cursor-pointer shadow-md rounded-md hover:brightness-50 hover:duration-300"
-                            src="{{ $image }}" alt="image" onclick="changeImage('{{ $image }}')">
+                            src="{{ $image->url }}" alt="image" onclick="changeImage('{{ $image->url }}')">
                     </div>
                 @endforeach
             </div>
         </div>
 
-        <div class="bg-blue-900 lg:p-12 p-6 lg:my-16 md:my-16 my-4 lg:mx-32 md:mx-16 mx-6 lg:rounded-3xl rounded-xl lg:flex lg:flex-wrap md:flex md:flex-wrap grid grid-cols-2">
+        <div
+            class="bg-blue-900 lg:p-12 p-6 lg:my-16 md:my-16 my-4 lg:mx-32 md:mx-16 mx-6 lg:rounded-3xl rounded-xl lg:flex lg:flex-wrap md:flex md:flex-wrap grid grid-cols-2">
             @forelse ($crews as $crew)
                 <div class="lg:me-14 md:me-8 me-4 lg:my-4 md:my-4 my-2">
                     <p class="text-yellow-600">{{ $crew->pivot->role }}</p>
                     <p class="text-white-900">{{ $crew->name }}</p>
                 </div>
             @empty
-                <div class="alert alert-danger">
+                <div class="alert alert-danger text-white-900">
                     Crew data is empty.
                 </div>
             @endforelse
         </div>
-
 
         <script>
             function changeImage(src) {

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Image;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class AdminProjectPhotosController extends Controller
 {
@@ -13,12 +14,9 @@ class AdminProjectPhotosController extends Controller
      */
     public function index(Project $project)
     {
-        $media = $project->getMedia();
+        // $media = $project->getMedia();
 
-        foreach ($media as $value) {
-            $value->url = parse_url($value->getUrl())['path'];
-        }
-        // dd($media->toArray());
+        $media = Image::where('project_id', $project->id)->get();
 
         return view('admin.projects.photos.index', [
             'media' => $media,
@@ -41,10 +39,25 @@ class AdminProjectPhotosController extends Controller
     {
         $data = $this->validate($request, [
             'photos' => 'required',
-            'photos.*' => 'mimes:png,jpg,jpeg'
+            'photos.*' => 'mimes:png,jpg,jpeg|max:4096'
         ]);
+
+        if (Image::checkFileSizes($request->file('photos'))) {
+            return back()->withErrors(['error' => 'File(s) size must not exceed 4MB']);
+        }
+        
         foreach ($data['photos'] as $photo) {
-            $project->addMedia($photo)->toMediaCollection();
+            
+            $url = cloudinary()->upload($photo
+            ->getRealPath(), ['folder' => 'moreart',])->getSecurePath();
+            
+            $public_id = Image::extractPublicId($url);
+            
+            Image::create([
+                'url' => $url,
+                'public_id' => $public_id,
+                'project_id' => $project->id
+            ]);
         }
         return redirect()->route('projects.photos.index', $project->id);
     }
@@ -78,8 +91,14 @@ class AdminProjectPhotosController extends Controller
      */
     public function destroy(Project $project, $mediaId)
     {
-        $media = $project->getMedia()->find($mediaId);
-        $media->delete();
+        // $media = $project->getMedia()->find($mediaId);
+        // $media->delete();
+
+        $image= Image::find($mediaId);
+
+        Cloudinary::destroy($image->public_id);
+
+        $image->delete();
 
         return redirect()->back();
     }

@@ -29,9 +29,9 @@ class HomeController extends Controller
         $projects = Project::latest()->get();
     }
         foreach ($projects as $project) {
-            $firstMedia = $project->getMedia()->first();
+            $firstMedia = $project->image->first();
             if ($firstMedia) {
-                $project->first_image_url = parse_url($firstMedia->getUrl())['path'];
+                $project->first_image_url = $firstMedia->url;
             } else {
                 $project->first_image_url = null; // Set a default or handle if no image is available
             }
@@ -44,12 +44,13 @@ class HomeController extends Controller
 
     public function worksDetail(Project $project): View
     {
-        $images = [];
-        foreach ($project->getMedia() as $image) {
-            $images[] = parse_url($image->getUrl())['path'];
-        }
+        $images = $project->image;
+        // foreach ($images as $image) {
+        //     $images[] = parse_url($image->getUrl())['path'];
+        // }
 
-        $crews = $project->crews()->latest()->paginate();
+        $crews = $project->crews;
+        // dd($crews);
 
         return view('home.worksDetail', ['project' => $project, 'crews' => $crews, 'images' => $images]);
     }

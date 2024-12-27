@@ -53,4 +53,9 @@ class Project extends Model implements HasMedia
     {
         return $this->belongsToMany(Crew::class, 'project_crew')->withPivot('role', 'id');
     }
+
+    public function image()
+{
+    return $this->hasMany(Image::class);
+}
 }
