@@ -94,9 +94,9 @@ class AdminProjectController extends Controller
 
     public function destroy($id): RedirectResponse
     {
-        $projects= Project::find($id);
+        $project= Project::find($id);
 
-        $projects->delete();
+        $project->delete();
 
         return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
     }

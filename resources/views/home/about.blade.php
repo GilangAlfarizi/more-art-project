@@ -83,18 +83,27 @@
     </div>
 
     <div class="lg:m-24 m-12">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li class="p-4 my-4 rounded bg-red-600 text-white-900">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <p class="text-4xl font-bold font-dmSerif text-center">Contact</p>
-        <form action="{{ route('home.about.sendEmail') }}" method="POST" class="max-w-lg mx-auto mt-10">
+        <form action="{{ route('home.about.sendEmail') }}" method="post" class="max-w-lg mx-auto mt-10">
             @csrf
             <div class="mb-5">
                 <label for="email" class="block mb-2 font-medium text-gray-900 font-lora">Email</label>
-                <input type="email" id="email"
+                <input type="email" name="email"
                     class="shadow-sm font-lora bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="example@email.com" required />
             </div>
             <div class="mb-5">
                 <label for="message" class="block mb-2 font-medium text-gray-900 font-lora">Message</label>
-                <textarea id="" rows="4"
+                <textarea rows="4" name="message" required
                     class="block p-2.5 w-full font-lora text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Leave a message..."></textarea>
             </div>
@@ -104,3 +113,4 @@
         </form>
     </div>
 @endsection
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

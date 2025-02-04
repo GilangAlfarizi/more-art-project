@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactEmail;
 use Illuminate\View\View;
 use App\Models\Project;
 use App\Models\Category;
@@ -69,14 +70,14 @@ class HomeController extends Controller
             'message' => 'required|string|max:500',
         ]);
 
+        $recipient = 'rascalhensind@gmail.com';
+        $sender = $validatedData['email'];
+        $message = $validatedData['message'];
+
         // Send email
-        Mail::raw($validatedData['message'], function ($message) use ($validatedData) {
-            $message->to('recipient@example.com') // Replace with the recipient's email
-                    ->subject('New Contact Message')
-                    ->from($validatedData['email']); // Send from the sender's email
-        });
+        Mail::to($recipient)->send(new ContactEmail($message, $sender));
 
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+        return redirect()->route('home.about')->with('success', 'Your message has been sent successfully!');
     }
 }

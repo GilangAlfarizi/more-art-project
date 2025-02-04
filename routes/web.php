@@ -36,11 +36,6 @@ Route::prefix('admin')->group(function () {
         Route::resource('/categories', AdminCategoryController::class);
         Route::resource('/crews', AdminCrewController::class);
         Route::resource('projects.photos', AdminProjectPhotosController::class)->only(['index', 'store', 'destroy']);
-       
-
-        // Route::resource('projects.details', AdminProjectCrewController::class)
-        //     ->parameters(['details' => 'crew'])     
-        //     ->only(['index', 'create', 'store', 'edit', 'update', 'show', 'destroy']);
         
         Route::get('/projects/{project}/crew', [AdminProjectCrewController::class, 'index'])->name('projects.details.index');
         Route::get('/projects/{project}/crew/create', [AdminProjectCrewController::class, 'create'])->name('projects.details.create');

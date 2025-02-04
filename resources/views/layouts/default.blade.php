@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -19,7 +20,7 @@
 <body class="flex flex-col h-screen">
     <header class="flex justify-center fixed top-0 left-0 right-0 z-10">
         <div
-            class="bg-blue-900 text-white-900 lg:my-10 my-6 flex justify-start font-lora w-fit rounded-3xl px-8 border-2 border-blue-white-900 border-opacity-25">
+            class="bg-blue-900 text-white-900 lg:my-10 my-6 flex justify-start font-lora w-fit rounded-3xl px-8 shadow-md">
             <img src="{{ URL::asset('/image/moreart-logo-alt.png') }}" alt="logo"
                 class="w-8 h-8 mt-3 lg:mr-10 mr-6 object-contain">
             <a href="{{ url('/') }}">
@@ -65,5 +66,18 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+<script>
+    //message with toastr
+    @if (session()->has('success'))
+
+        toastr.success('{{ session('success') }}', 'Success!');
+    @elseif (session()->has('error'))
+        toastr.error('{{ session('error') }}', 'Fail!');
+    @endif
+</script>
 
 </html>

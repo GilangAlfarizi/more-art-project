@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Image\Enums\Fit;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Project extends Model implements HasMedia
+class Project extends Model 
 {
-    use HasFactory, InteractsWithMedia;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -55,7 +52,7 @@ class Project extends Model implements HasMedia
     }
 
     public function image()
-{
-    return $this->hasMany(Image::class);
-}
+    {
+        return $this->hasMany(Image::class);
+    }
 }
