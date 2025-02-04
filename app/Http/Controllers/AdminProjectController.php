@@ -63,8 +63,8 @@ class AdminProjectController extends Controller
         $this->validate($request, [
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'videoUrl' => 'required',
-            'client' => 'required',
+            'videoUrl' => 'nullable',
+            'client' => 'nullable',
             'agency' => 'nullable',
             'ph' => 'nullable',
             'category_id' => 'required',
@@ -88,7 +88,6 @@ class AdminProjectController extends Controller
     public function show(string $id): View
     {
         $project = Project::findOrFail($id);
-        // return view('admin.projects.show', compact('project'));
         return view('admin.projects.show', ['project' => $project]);
     }
 
