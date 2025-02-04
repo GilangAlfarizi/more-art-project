@@ -17,8 +17,9 @@
             @csrf
             <div class="mt-5">
                 <div class="w-full bg-white-900 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 font-lora">
-                    <x-button-close />
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">
+                    <x-button-close route="{{ route('projects.index') }}" />
+                    <h5 class="mb-2 text-2xl
+                        font-bold tracking-tight text-gray-900 text-center">
                         Create Project
                     </h5>
                     <div class="form-group">
@@ -32,7 +33,7 @@
                                 <option value="">Tidak ada Category</option>
                             @endforelse
                         </select>
-                    </div>{{-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> --}}
+                    </div>
                     <div class="form-group mb-4">
                         <label class="block mb-2 text-lg font-medium text-gray-900 my-4">Title</label>
                         <input type="string" name="title"
