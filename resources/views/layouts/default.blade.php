@@ -41,18 +41,15 @@
             </a>
         </div>
     </header>
-    <div class="">
+    <div>
         @yield('content')
     </div>
-    <footer class="">
-        <div class="bg-gray-200 py-10 flex justify-between font-lora lg:px-72 md:px-52 sm:px-20 max-sm:px-20">
-            <p class="font-bold">2024 Moreart</p>
-            <div class="flex space-x-20">
+    <footer class="text-sm lg:text-md mt-8">
+        <div class="bg-gray-200 py-10 flex lg:justify-between font-lora lg:px-72 md:px-52 sm:px-20">
+            <p class="font-bold lg:mx-0 mx-4">2024 Moreart</p>
+            <div class="flex lg:space-x-20 space-x-10">
                 <div class="space-y-2">
                     <p class="font-bold">Elsewhere</p>
-                    <p>Figma</p>
-                    <p>Github</p>
-                    <p>Posts</p>
                     <p>CV</p>
                     <p>LinkedIn</p>
                 </div>
@@ -73,7 +70,6 @@
 <script>
     //message with toastr
     @if (session()->has('success'))
-
         toastr.success('{{ session('success') }}', 'Success!');
     @elseif (session()->has('error'))
         toastr.error('{{ session('error') }}', 'Fail!');

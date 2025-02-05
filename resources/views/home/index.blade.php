@@ -12,7 +12,7 @@
         </p>
     </div>
     <div class="lg:mt-16 mt-10">
-        <h1 class="lg:text-7xl text-5xl font-dmSerif lg:pb-8 text-center">
+        <h1 class="lg:text-7xl text-5xl font-dmSerif  text-center">
             Magnum Opus
         </h1>
         <div class="grid lg:gap-8 gap-4 grid-rows-2 m-10 lg:px-32">
@@ -84,9 +84,10 @@
     <p class="lg:text-7xl text-5xl font-dmSerif lg:pb-8 text-center">
         Services
     </p>
-    <div class="lg:mx-52 p-10 lg:flex justify-center items-center lg:gap-4">
-        <div class="max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
-            <img class="rounded-t-3xl max-h-60 overflow-hidden object-cover" src="/image/service1.jpg" alt="" />
+    <div class="px-10 sm:flex-none md:flex justify-center items-center gap-2 lg:gap-4 mt-8 lg:mt-0">
+        <div class="lg:max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
+            <img class="rounded-t-3xl max-h-60 overflow-hidden object-cover w-full" src="/image/service1.jpg"
+                alt="" />
             <div class="p-6 m-2">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight font-lora text-yellow-600">Service 1</h5>
                 <p class="mb-3 font-normal font-lora">Here are the biggest enterprise technology acquisitions of 2021 so
@@ -94,7 +95,7 @@
                     reverse chronological order.</p>
             </div>
         </div>
-        <div class="max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
+        <div class="lg:max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
             <img class="rounded-t-3xl max-h-60 overflow-hidden" src="/image/service2.jpg" alt="" />
             <div class="p-6 m-2">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight font-lora text-yellow-600">Service 2</h5>
@@ -103,7 +104,7 @@
                     reverse chronological order.</p>
             </div>
         </div>
-        <div class="max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
+        <div class="lg:max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
             <img class="rounded-t-3xl max-h-60 overflow-hidden" src="/image/service3.jpg" alt="" />
             <div class="p-6 m-2">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight font-lora text-yellow-600">Service 3</h5>

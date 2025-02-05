@@ -36,7 +36,7 @@
             </form>
             <p class="text-center font-bold text-2xl my-4">Project Photos</p>
 
-            <div class="">
+            <div>
                 <div class="grid grid-cols-3 gap-4 ">
                     @foreach ($media as $item)
                         <div class="container relative">

@@ -10,10 +10,10 @@
             </div>
         </div>
 
-        <div class="font-semibold font-lora">
+        <div class="font-semibold font-lora lg:mt-14">
             <form method="GET" action="{{ route('home.works') }}">
                 <div
-                    class="flex flex-wrap justify-center gap-4 lg:mx-80 mx-24 mt-12 text-sm lg:text-md {{ request('category') == '' ? 'text-black-900' : 'text-gray-400' }}">
+                    class="flex flex-wrap justify-center gap-4 lg:mx-80 mx-24 mt-12 text-md lg:text-xl {{ request('category') == '' ? 'text-black-900' : 'text-gray-400' }}">
                     <button type="submit" name="category" value="">
                         All Categories
                     </button>

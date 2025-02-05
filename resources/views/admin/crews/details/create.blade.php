@@ -13,7 +13,7 @@
             </div>
         @endif
 
-        <form action="{{ route('crews.details.store', $crew->id) }}" method="post" class="">
+        <form action="{{ route('crews.details.store', $crew->id) }}" method="post">
             @csrf
             <div class="w-full bg-white-900 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 font-lora">
                 <div class="flex justify-center mb-6">
