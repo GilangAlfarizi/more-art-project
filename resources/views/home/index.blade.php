@@ -18,14 +18,16 @@
         <div class="grid lg:gap-8 gap-4 grid-rows-2 m-10 lg:px-32">
             <div class="flex justify-center lg:gap-x-8 gap-x-4">
                 <div class="relative group">
-                    <img class="w-64 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
-                        src="/image/Screenshot_9 (1).png" alt="SATU TUJU">
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 rounded-xl lg:rounded-3xl transition-opacity duration-300 ease-in-out">
-                        <span class="text-yellow-600 text-center font-dmSerif mx-8 lg:text-xl text-md">Mahalini X Rizky
-                            Febian<br />Satu
-                            Tuju</span>
-                    </div>
+                    <a href="{{ route('home.works.detail', 5) }}">
+                        <img class="w-64 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
+                            src="/image/Screenshot_9 (1).png" alt="SATU TUJU">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 rounded-xl lg:rounded-3xl transition-opacity duration-300 ease-in-out">
+                            <span class="text-yellow-600 text-center font-dmSerif mx-8 lg:text-xl text-md">Mahalini X Rizky
+                                Febian<br />Satu
+                                Tuju</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="relative group">
                     <img class="w-96 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
@@ -39,12 +41,15 @@
             </div>
             <div class="flex justify-center lg:gap-x-8 gap-x-4">
                 <div class="relative group">
-                    <img class="w-96 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
-                        src="/image/Screenshot (209).png" alt="Garis Waktu">
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 rounded-xl lg:rounded-3xl transition-opacity duration-300 ease-in-out">
-                        <span class="text-yellow-600 text-center font-dmSerif mx-8 lg:text-xl text-md">Garis Waktu</span>
-                    </div>
+                    <a href="{{ route('home.works.detail', 3) }}">
+                        <img class="w-96 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
+                            src="/image/Screenshot (209).png" alt="Garis Waktu">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 rounded-xl lg:rounded-3xl transition-opacity duration-300 ease-in-out">
+                            <span class="text-yellow-600 text-center font-dmSerif mx-8 lg:text-xl text-md">Garis
+                                Waktu</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="relative group">
                     <img class="w-64 rounded-xl lg:rounded-3xl transition-transform duration-300 ease-in-out transform hover:bg-opacity-90"
@@ -76,10 +81,10 @@
         </div>
     </div>
 
-    <p class="lg:text-7xl text-5xl font-dmSerif text-center">
+    <p class="lg:text-7xl text-5xl font-dmSerif lg:pb-8 text-center">
         Services
     </p>
-    <div class="lg:mx-52 lg:p-20 p-10 lg:flex justify-center items-center lg:gap-4">
+    <div class="lg:mx-52 p-10 lg:flex justify-center items-center lg:gap-4">
         <div class="max-w-sm bg-white border bg-blue-900 text-white-900 border-gray-200 rounded-3xl shadow mb-8">
             <img class="rounded-t-3xl max-h-60 overflow-hidden object-cover" src="/image/service1.jpg" alt="" />
             <div class="p-6 m-2">

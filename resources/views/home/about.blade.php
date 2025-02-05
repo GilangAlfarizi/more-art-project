@@ -47,36 +47,45 @@
             <p class="text-4xl font-bold font-dmSerif mb-10">Clients</p>
             <div class="flex flex-col lg:flex-row justify-center items-center align-middle lg:gap-24 gap-8">
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738729/gopay_lejnyw.png"
+                        alt="gopay">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738729/ace_ajatze.png" alt="ace">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/disney_ojpwwc.svg"
+                        alt="disney">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/bukalapak_gnqvt8.png"
+                        alt="bukalapak">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/herborist_oufszs.png"
+                        alt="herborist">
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row justify-center items-center align-middle lg:gap-24 gap-8 mt-8">
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/infinix_edra3m.png"
+                        alt="infinix">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/LPS_shhitc.png" alt="LPS">
+                </div>
+
+                <div class="max-w-24">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738728/yellowfit_peb8ei.ico"
+                        alt="yellowfit">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738991/panasonic_isqyo5.jpg"
+                        alt="panasonic">
                 </div>
                 <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
-                </div>
-                <div class="max-w-24">
-                    <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt="">
+                    <img src="https://res.cloudinary.com/dmahgqymw/image/upload/v1738738991/dunhill_d05oxm.png"
+                        alt="dunhill">
                 </div>
             </div>
         </div>

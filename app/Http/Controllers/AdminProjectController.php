@@ -30,8 +30,8 @@ class AdminProjectController extends Controller
        $this->validate($request, [
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'videoUrl' => 'required|min:5',
-            'client' => 'required',
+            'videoUrl' => 'nullable|min:5',
+            'client' => 'nullable',
             'agency' => 'nullable',
             'ph' => 'nullable',
             'category_id' => 'required',

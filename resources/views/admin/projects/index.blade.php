@@ -23,8 +23,7 @@
                         @forelse ($projects as $project)
                             <tr
                                 class="bg-gray-200 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 align-middle">
-                                <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $project->id }}
                                 </th>
                                 <td class="px-6 py-4 text-gray-900">
@@ -37,10 +36,10 @@
                                     {{ Str::limit($project->description, 80) }}
                                 </td>
                                 <td class="px-6 py-4 text-gray-900">
-                                    {{ $project->videoUrl }}
+                                    {{ $project->videoUrl ?? '-' }}
                                 </td>
                                 <td class="px-6 py-4 text-gray-900">
-                                    {{ $project->client }}
+                                    {{ $project->client ?? '-' }}
                                 </td>
                                 <td class="px-6 py-4 text-gray-900">
                                     {{ $project->agency ?? '-' }}
