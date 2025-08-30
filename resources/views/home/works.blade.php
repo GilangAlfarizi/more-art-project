@@ -10,15 +10,15 @@
             </div>
         </div>
 
-        <div class="font-semibold font-lora lg:mt-14">
+        <div class="font-semibold font-lora lg:mt-14 sm:text-sm md:text-md lg:text-xl">
             <form method="GET" action="{{ route('home.works') }}">
                 <div
-                    class="flex flex-wrap justify-center gap-4 lg:mx-80 mx-24 mt-12 text-md lg:text-xl {{ request('category') == '' ? 'text-black-900' : 'text-gray-400' }}">
+                    class="flex flex-wrap justify-center gap-4 lg:mx-80 mx-24 mt-12 {{ request('category') == '' ? 'text-black-900' : 'text-gray-400' }}">
                     <button type="submit" name="category" value="">
                         All Categories
                     </button>
                     @foreach ($categories as $category)
-                        <span class="lg:mx-2 text-gray-400">|</span>
+                        <span class="sm:invsible lg:mx-2 text-gray-400">|</span>
                         <button type="submit" name="category" value="{{ $category->id }}"
                             class="{{ request('category') == $category->id ? 'text-black-900' : 'text-gray-400' }}">
                             {{ $category->name }}
@@ -37,13 +37,13 @@
                                 class="object-cover w-full h-full">
                             <div class="absolute inset-0 flex items-center justify-center group">
                                 <h2
-                                    class="text-white-900 pl-4 text-opacity-35 text-7xl uppercase font-bold font-lora transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+                                    class="text-white-900 p-4 text-opacity-35 text-2xl lg:text-7xl uppercase font-bold font-lora transition-opacity duration-300 ease-in-out group-hover:opacity-0">
                                     {{ $project->title }}
                                 </h2>
                                 <div
                                     class="absolute inset-0 flex items-center justify-center bg-yellow-600 bg-opacity-80 opacity-0 group-hover:opacity-75 transition-opacity duration-300 ease-in-out">
                                     <h2
-                                        class="text-blue-900 text-2xl text-center font-bold font-lora opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out p-4">
+                                        class="text-blue-900 text-2xl text-center font-bold font-lora opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out lg:p-12">
                                         {{ $project->title }}
                                     </h2>
                                 </div>
