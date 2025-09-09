@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Moreart</title>
+    <title>More Art Portfolio</title>
+    <meta name="google-site-verification" content="ed_EMuoK1EDaOVtxA9j8s5CX3XxvmtBrVEsr1Pw-6uY" />
+    <meta name="description"
+        content="Moreart is an Art Director portfolio focusing on filmography, with professional experience in advertisement, music videos, and photography. Discover creative visual storytelling and innovative direction.">
+    <meta name="keywords"
+        content="Art Director, Filmography, Advertisement, Music Video, Photography, Creative Direction, Visual Storytelling, Portfolio, Branding, Cinematography, Creative Studio">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="{{ asset('/image/moreart-logo-alt.png') }}">
